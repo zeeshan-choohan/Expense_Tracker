@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Budget Manager</h1>
+    </header>
+    <main>
+        <section id="budgetOverview">
+            <h2>Annual Budget Overview</h2>
+            <div id="budgetInput">
+                <label for="totalBudget">Total Budget ($):</label>
+                <input type="number" id="totalBudget" min="0" step="0.01" required>
+                <button id="saveBudget">Save Budget</button>
+            </div>
+            <div id="budgetOverviewData">
+                <!-- Data will be populated using JavaScript -->
+            </div>
+            <button id="download-pdf-button">Download Budget Summary (PDF)</button>
+        </section>
+        <section id="budgetTracking">
+            <h2>Budget Tracking</h2>
+            <div id="budgetTrackingResults">
+                <!-- Data will be populated using JavaScript -->
+            </div>
+        </section>
+        <section id="financialReports">
+            <h2>Financial Reports</h2>
+            <div id="financialReportsData">
+                <!-- Data will be populated using JavaScript -->
+            </div>
+        </section>
+        <section id="expenses">
+            <h2>Manage Expenses</h2>
+            <form id="expenseForm">
+                <div>
+                    <label for="expenseDate">Date:</label>
+                    <input type="date" id="expenseDate" required>
+                </div>
+                <div>
+                    <label for="expenseAmount">Amount ($):</label>
+                    <input type="number" id="expenseAmount" min="0" step="0.01" required>
+                </div>
+                <div>
+                    <label for="expenseDescription">Expense:</label>
+                    <input type="text" id="expenseDescription" required>
+                </div>
+                <button type="submit" id="expenseSubmitBtn">Add Expense</button>
+            </form>
+            <div id="expensesList">
+                <!-- Expenses will be dynamically populated here -->
+            </div>
+        </section>
+    </main>
+    <footer id="copyright">
+        <p>&copy; Expense Tracker 2024. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.16.0/pdf-lib.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
